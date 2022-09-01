@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp2
 {
+    //Node Model
     public class Node
     {
         public int value; 

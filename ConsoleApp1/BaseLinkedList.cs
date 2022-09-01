@@ -9,9 +9,12 @@ using ConsoleApp2.Interfaces;
 
 namespace ConsoleApp2
 {
+    //Base class for overall Linked list types (one way, two way)
     public class BaseLinkedList : IBaseLinkedList
     {
         public Node head;
+
+        //Enumarator implementation
         public IEnumerator<int> GetEnumerator()
         {
             var current = this.head;

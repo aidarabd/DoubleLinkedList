@@ -5,11 +5,16 @@ namespace ConsoleApp2
 {
     public class DoubleLinkedList : BaseLinkedList, IDoubleLinkedList
     {
+        //-------
+        // auth Aidar Abakir
+        //-------
+
         public DoubleLinkedList()
         {
             head = null;
         }
 
+        //Add node as first element
         public void AddNodeFirst(int value)
         {
             Node node = new Node();
@@ -29,6 +34,7 @@ namespace ConsoleApp2
             }
         }
 
+        //Delete first element
         public void DeleteNodeFirst()
         {
             if(head != null)
@@ -45,7 +51,7 @@ namespace ConsoleApp2
             }
         }
 
-        //bubble
+        //bubble sort
         public void Sort() 
         {
             bool swapped = true;
@@ -66,6 +72,7 @@ namespace ConsoleApp2
                 {
                     if(currentPointer.value > currentPointer.next.value)
                     {
+                        // here we swap
                         int tempVal = currentPointer.value;
                         currentPointer.value = currentPointer.next.value;
                         currentPointer.next.value = tempVal;
@@ -73,16 +80,19 @@ namespace ConsoleApp2
                     }
                     currentPointer = currentPointer.next;
                 }
+                //move end node
                 endPointer = currentPointer;
             }
             
         }
 
+        //needs to be implemented
         public void AddNodeLast(int value)
         {
             throw new NotImplementedException();
         }
 
+        //needs to be implemented
         public void DeleteNodeLast()
         {
             throw new NotImplementedException();
